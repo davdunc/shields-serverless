@@ -1,2 +1,2 @@
 # shields-serverless
-Serverless Implimentation to generate shields using AWS API Gateway and Lambda.
+Serverless implementation to generate shields using Amazon API Gateway and AWS Lambda.
