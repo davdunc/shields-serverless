@@ -1,0 +1,29 @@
+{
+  "name": "shields-serverless",
+  "version": "0.0.1",
+  "description": "Serverless implementation for dynamic shield generation using AWS Services.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicornpartners/shields-serverless.git"
+  },
+  "keywords": [
+    "shields",
+    "serverless"
+  ],
+  "author": "Unicorn Partners",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/unicornpartners/shields-serverless/issues"
+  },
+  "homepage": "https://github.com/unicornpartners/shields-serverless#readme",
+  "devDependencies": {
+    "lambda-tester": "^3.0.2"
+  },
+  "dependencies": {
+    "swig": "^1.4.2"
+  }
+}
