@@ -17,7 +17,7 @@ class Shield {
 	}
 
 	generate (left,right,color) {
-		let params = {left: left, right: right, color: color};
+		let params = {left: unescape(left), right: unescape(right), color: color};
 		let shield = swig.renderFile(path.join(__dirname, "templates", "flat-template.svg"), params);
 		return shield;
 	}
