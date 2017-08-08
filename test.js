@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const dns = require("dns");
 const os = require("os");
-var shield = require("./src/handler.js");
+var shield = require("./src/app.js");
 
 app.get("/v2/", function(req,res){
 	console.info("Recieved an empty request");

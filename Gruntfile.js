@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files:[
-            {expand: true, src: ["node_modules/**"], dest: 'deploy/'},
+            {expand: true, src: ["node_modules/**"], dest: 'deploy/', dot: true},
             {expand: true, src: ["src/*.js"], dest: 'deploy/', flatten: true, filter: 'isFile'},
             {expand: true, src: ["fonts/**"], dest: 'deploy/'}
           ]
@@ -21,7 +21,8 @@ module.exports = function(grunt) {
       'using-cwd': {
         cwd: 'deploy/',
         src: ['deploy/**'],
-        dest: 'target/lambda-output.zip'
+        dest: 'target/lambda-output.zip',
+        dot: true
       }
     }
   });
