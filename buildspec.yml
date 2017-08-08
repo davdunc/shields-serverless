@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Downloading the Verdana Font from S3"
+      - mkdir -p fonts
+      - aws s3 cp s3://${S3_BUCKET_NAME}/${S3_PREFIX}/third-party/fonts/Verdana.ttf fonts/
+      - echo "Installing the required Node NPM Modules."
+      - npm install -g grunt-cli
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm install
+      - grunt    
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Uploading Lambda Function to S3.
+      - aws s3 cp target/lambda-output.zip s3://${S3_BUCKET_NAME}/${S3_PREFIX}/lambda/function.zip
+      - printf '{"tag":"%s"}' `date +%s` > build.json
+artifacts:
+  files: build.json

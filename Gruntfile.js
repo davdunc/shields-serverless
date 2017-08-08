@@ -31,7 +31,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-zip');
 
-  // Default task(s).
+   // Default task(s).
   grunt.registerTask('default', ['eslint','copy','zip']);
 
 };
