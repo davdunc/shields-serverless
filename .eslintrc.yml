@@ -9,7 +9,7 @@ rules:
     - error
     - tab
   linebreak-style:
-    - error
+    - warn
     - unix
   quotes:
     - error
@@ -17,3 +17,9 @@ rules:
   semi:
     - error
     - always
+  no-console:
+    - warn
+    - allow:
+      - warn
+      - error
+      - info

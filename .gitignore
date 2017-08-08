@@ -59,3 +59,12 @@ typings/
 
 # Ignore VSCode
 .vscode/
+
+#Ignore the Fonts Folder
+fonts/*
+
+#Ignore Deployed Folder
+deploy/
+
+#Ignore Target Folder
+target/

@@ -1,1 +1,0 @@
-Shields templates taken from https://github.com/badges/shields/tree/master/templates
