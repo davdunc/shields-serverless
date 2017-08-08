@@ -7,10 +7,10 @@
  * @return {[string]}
  */
 function shieldGen(left,right,color,template){
-	left = (typeof left !== "undefined") ? left : "left text";
-	right = (typeof right !== "undefined") ? right : "right text";
-	color = (typeof color !== "undefined") ? color : "red";
-	template = (typeof template !== "undefined") ? template : "flat-square";
+	left = (typeof left !== "undefined" && left != "" ) ? left : "left text";
+	right = (typeof right !== "undefined" && right != "" ) ? right : "right text";
+	color = (typeof color !== "undefined" && color != "" ) ? color : "red";
+	template = (typeof template !== "undefined" && template != "" ) ? template : "flat-square";
 	return {left: left, right: right, color: color, template: template};
 }
 
